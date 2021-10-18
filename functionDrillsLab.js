@@ -44,6 +44,7 @@ function greeting(name){
   console.log(`Hello, ${String(name)}`);
 }
 greeting("Jake");
+
 ////////////////// PROBLEM 4 ////////////////////
 /*
   Create a function called add that takes in two parameters 
@@ -53,7 +54,10 @@ greeting("Jake");
 */
 
 //CODE HERE
-
+function add(num1, num2){
+  return Number(num1) + Number(num2);
+}
+let sum = add(2,10);
 
 ////////////////// PROBLEM 5 ////////////////////
 /*
