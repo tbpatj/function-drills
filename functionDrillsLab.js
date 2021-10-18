@@ -96,7 +96,19 @@ function nameCheck(name){
 */
 
 //CODE HERE
+function faveColorFinder(color){
+  if(color === 'red'){
+    return 'red is a great color';
+  } else if(color === 'green'){
+    return 'green is a solid favorite color';
+  } else if(color === 'black'){
+    return 'so trendy';
+  } else {
+    return 'you need to evaluate your favorite color choice';
+  }
+}
 
+let colorRating = faveColorFinder("red");
 
 ////////////////// PROBLEM 7 ////////////////////
 let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
@@ -107,8 +119,13 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
+function printAllNames(names){
+  for(let i = 0; i < names.length; i ++){
+    console.log(names[i]);
+  }
+}
 
-
+printAllNames(namesArr);
 ////////////////// PROBLEM 8 ////////////////////
 /*
   Create a function called thatsOdd that takes in a single argument (a number).
