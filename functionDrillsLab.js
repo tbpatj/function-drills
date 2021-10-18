@@ -154,9 +154,21 @@ let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
   If the number is LESS than or EQUAL to 100, push 'small' as a string to the answers array. 
   Return the answers array inside of the function to a variable called `arrayEvaluator`.
 */
-
+let answer = [];
 //CODE HERE
+function bigOrSmall(arr){
+  let answers = [];
+  for(let i = 0; i < arr.length; i ++){
+    if(arr[i] > 100){
+      answers.push('big')
+    } else {
+      answers.push('small');
+    }
+  }
+  return answers;
+}
 
+let arrayEvaluator = bigOrSmall(bigOrSmallArray);
 
 ////////////////// PROBLEM 10 ////////////////////
 let contestants = ['Katniss', 'Peeta', 'Fox-face', 'Glimmer', 'Cato', 'Rue', 'Thresh', 'Clove', 'Marvel']
@@ -167,7 +179,16 @@ let loser = 'Glimmer'
 */
 
 //CODE HERE
+function theEliminator(contestants, loser){
+  for(let i = 0; i < contestants.length; i ++){
+    if(loser.includes(contestants[i])){
+      contestants.splice(i,1);
+    }
+  }
+  return contestants;
+}
 
+console.log(theEliminator(contestants,loser));
 
 ////////////////// PROBLEM 11 ////////////////////
 let sampleString = "Hi, my name is Kylo."
@@ -177,8 +198,10 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
-
-
+function shout(words){
+  console.log(String(words).toUpperCase());
+}
+shout(sampleString);
 ////////////////// PROBLEM 12 ////////////////////
 /*
   Write a function called emailCheck that takes in
@@ -189,6 +212,16 @@ let sampleString = "Hi, my name is Kylo."
   If it does, return 'email verified' and if doesn't, 
   return 'must provide a valid email address'
 */
+function emailCheck(email){
+  email = String(email).trim();
+  if(String(email).includes("@")){
+    return 'email verified';
+  } else {
+    return 'must provide a valid email address';
+  }
+}
+
+
 
 ////////////////// PROBLEM 13 ////////////////////
 /*
@@ -197,7 +230,11 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
-
+function buyAChocFroggy(gold){
+  return (gold / 3);
+}
+let totalFrogs = buyAChocFroggy(40);
+console.log(totalFrogs);
 
 ////////////////// PROBLEM 14 ////////////////////
 /*
@@ -205,16 +242,31 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
-
+function buyAChocFroggy2(gold){
+  return Math.floor(gold / 3);
+}
+let totalFrogs2 = buyAChocFroggy2(40);
+console.log(totalFrogs2);
 
 ////////////////// PROBLEM 15 ////////////////////
 let sampleArray = [0,1,2,3,4,7,5,6,8,9]
+let sampleArray2 = [0,1,2,3,4,5,6,7,8];
 /*
   Write a function that takes in an array of numbers as an argument. In the body of the function, write logic to determine if the array is in ascending order. The function should return true, if it is sorted in ascending order, false if it is not. Create a variable, `arrayIsAscending` and set it equal to your function invoked. Use the sample array to test this function.
 */
 
 //CODE HERE
+function isThisAscending(arrayParam){
+  for(let i = 0; i < arrayParam.length - 1; i ++){
+    if(arrayParam[i] > arrayParam[i + 1]){
+      return false;
+    }
+  }
+  return true;
+}
 
+let arrayIsAscending = isThisAscending(sampleArray);
+console.log(arrayIsAscending);
 
 ////////////////// PROBLEM 16 ////////////////////
 
@@ -238,13 +290,13 @@ function pond() {
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = []
+let globalScope = ['duck'];
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = []
+let bathroomScope = ['duck','rubberDuck'];
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = []
+let bathtubScope = ['duck','rubberDuck','sailorDuck'];
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = []
+let pondScope = ['duck','readDuck'];
