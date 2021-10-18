@@ -40,8 +40,10 @@ printName("George");
 */
 
 //CODE HERE
-
-
+function greeting(name){
+  console.log(`Hello, ${String(name)}`);
+}
+greeting("Jake");
 ////////////////// PROBLEM 4 ////////////////////
 /*
   Create a function called add that takes in two parameters 
