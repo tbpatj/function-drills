@@ -69,6 +69,20 @@ let sum = add(2,10);
 */
 
 //CODE HERE
+function nameCheck(name){
+  if (name === "Steven"){
+    return "What is up Steven?";
+  } else if(name === "Bryan"){
+    console.log("Hey bryan");
+  } else {
+    return `Cool name, ${name}`;
+  }
+}
+
+
+
+
+
 
 
 ////////////////// PROBLEM 6 ////////////////////
